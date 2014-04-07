@@ -1,0 +1,11 @@
+<%= render("layouts/errors", :object => @bus_line) %>
+
+<%= form_for(@bus_line) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>
+

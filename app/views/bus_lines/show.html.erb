@@ -1,0 +1,9 @@
+<%= content_for(:title, "Information") %>
+
+<h2><%= @bus_line.name %></h2>
+
+<p><%= link_to "Main Menu", bus_lines_path, :class => "btn btn-default" %></p>
+
+<p><%= link_to "Edit", edit_bus_line_path(@bus_line), :class => "btn btn-primary" %></p>
+
+<p><%= link_to "Delete", bus_line_path(@bus_line), :confirm => "Are you sure?", :method => "delete", :class => "btn btn-danger" %></p>
