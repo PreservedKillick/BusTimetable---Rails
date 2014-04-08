@@ -1,0 +1,16 @@
+<%= content_for(:title, "Stop Information") %>
+
+<h2></h2>
+
+
+<p><%= link_to "Add stop", new_stop_path(@stop), :class => "btn btn-primary" %></p>
+
+<p><%= link_to "Edit", edit_stop_path(@stop), :class => "btn btn-primary" %></p>
+
+<p><%= link_to "Delete", stop_path(@stop),
+       :confirm => "Are you sure?",
+       :method => "delete",
+       :class => "btn btn-danger"
+       %></p>
+
+

@@ -7,13 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+    <h1>Bus Timetable</h1>
 
-<h1>Bus Timetable</h1>
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
 
-<%= flash[:alert] %>
-<%= flash[:notice] %>
-
-<%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
 </html>

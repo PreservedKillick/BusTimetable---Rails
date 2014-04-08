@@ -1,0 +1,18 @@
+<%= content_for(:title, "Station Information") %>
+
+<h2><%= @station.name %></h2>
+
+
+<p><%= link_to "Stations Listing", stations_path, :class => "btn btn-primary" %></p>
+
+<p><%= link_to "Add stop", new_station_stop_path(@station), :class => "btn btn-primary" %></p>
+
+<p><%= link_to "Edit", edit_station_path(@station), :class => "btn btn-primary" %></p>
+
+<p><%= link_to "Delete", station_path(@station),
+       :confirm => "Are you sure?",
+       :method => "delete",
+       :class => "btn btn-danger"
+       %></p>
+
+
