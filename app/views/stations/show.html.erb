@@ -2,10 +2,15 @@
 
 <h2><%= @station.name %></h2>
 
+<ul>
+<% @station.stops.each do |stop| %>
+  <li><a href="/bus_lines/<%= stop.bus_line.id %>"><%= stop.bus_line.name %></a></li>
+<% end  %>
+</ul>
 
 <p><%= link_to "Stations Listing", stations_path, :class => "btn btn-primary" %></p>
 
-<p><%= link_to "Add stop", new_station_stop_path(@station), :class => "btn btn-primary" %></p>
+<p><%= link_to "Add stop", new_station_path, :class => "btn btn-primary" %></p>
 
 <p><%= link_to "Edit", edit_station_path(@station), :class => "btn btn-primary" %></p>
 

@@ -2,6 +2,12 @@
 
 <h2><%= @bus_line.name %></h2>
 
+<ul>
+<% @bus_line.stops.each do |stop| %>
+<li><a href="/stations/<%= stop.station.id %>"><%= stop.station.name %></a></li>
+<% end %>
+</ul>
+
 <p><%= link_to "Main Menu", bus_lines_path, :class => "btn btn-default" %></p>
 
 <p><%= link_to "Edit", edit_bus_line_path(@bus_line), :class => "btn btn-primary" %></p>

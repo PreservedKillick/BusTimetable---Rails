@@ -17,6 +17,8 @@ class StopsController < ApplicationController
 
   def show
     @stop = Stop.find(params[:id])
+    @bus_line = @stop.bus_line
+    @station = @stop.station
   end
 
 end

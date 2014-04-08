@@ -1,7 +1,8 @@
 <%= content_for(:title, "Stop Information") %>
 
-<h2></h2>
-
+<h2>Stop: <%= @station.name %>, <%= @bus_line.name %></h2>
+<br>
+<br>
 
 <p><%= link_to "Add stop", new_stop_path(@stop), :class => "btn btn-primary" %></p>
 
